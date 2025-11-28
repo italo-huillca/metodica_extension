@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Metodika Extension",
+  "version": "2.0",
+  "description": "Captura emociones del estudiante en Canvas para Metodika",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://*.instructure.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.instructure.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
